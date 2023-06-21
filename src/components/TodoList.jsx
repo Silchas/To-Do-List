@@ -2,7 +2,7 @@ import { useTodoContext } from '../context/TodoProvider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const TodoList = () => {
-    const { todoList, removeTask, markTaskAsComplete } = useTodoContext()
+    const { todoList, removeTask } = useTodoContext()
 
     return (
     <ul className='text-black flex flex-col space-y-2 m-3'>

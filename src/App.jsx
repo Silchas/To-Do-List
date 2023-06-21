@@ -6,6 +6,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import './App.css'
 import TodoList from './components/TodoList.jsx'
 import TodoForm from './components/TodoForm'
+// import { Auth } from './components/Auth'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <header>
         <h1 className='text-3xl font-bold'>To Do List</h1>
       </header>
+      {/* <Auth/> */}
       <TodoForm/>
       <TodoList/>
     </div>

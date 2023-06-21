@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useCallback } from "react";
 
 const TodoContext = createContext();
 
@@ -17,12 +17,19 @@ const TodoProvider = ({ children }) => {
         settodoList(newList)
     }
 
+    const useToggle = (initialState = false) =>{
+        const [state, setState] = useState(initialState)
+        const toggle = useCallback(()=> setState((state)=>!state), [])
+        
+        return [state, toggle]
+    }
 
     const contextValue = {
         todoList,
         addTask,
         NumberOfTasks,
         removeTask,
+        useToggle
     };
 
     return (
